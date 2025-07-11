@@ -1,3 +1,4 @@
+import WelcomeMessage from './components/WelcomeMessage';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -6,7 +7,16 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  function App() {
   return (
+    <div>
+      <WelcomeMessage />
+    </div>
+  );
+}
+
+  return 
+(
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -19,6 +29,7 @@ function App() {
       <h1>This far we have come</h1>
       <h4>React is my new thing</h4>
     </>
+    
   )
 }
 
