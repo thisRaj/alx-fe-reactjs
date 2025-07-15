@@ -8,6 +8,7 @@ import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
+import Counter from './components/Counter';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,14 +24,13 @@ function App() {
         </a>
       </div>
 
-      <h1>This far we have come</h1>
-      <h4>React is my new thing</h4>
-
+      <h1>React Counter App</h1>
       <WelcomeMessage />
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       <Header />
       <MainContent />
       <Footer />
+      <Counter />
     </>
   );
 }
