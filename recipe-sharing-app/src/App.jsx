@@ -13,6 +13,7 @@ import {
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
+import SearchBar from './components/SearchBar'; // 👈 Import added
 
 function HomePage() {
   const [count, setCount] = useState(0);
@@ -42,6 +43,9 @@ function HomePage() {
 
       <hr />
       <h2>Recipe Sharing App</h2>
+
+      {/* 🔍 Search and Recipe UI */}
+      <SearchBar />
       <AddRecipeForm />
       <RecipeList />
     </>
