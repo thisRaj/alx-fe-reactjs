@@ -6,8 +6,8 @@ const EditRecipeForm = ({ existingRecipe }) => {
   const [title, setTitle] = useState(existingRecipe.title);
   const [description, setDescription] = useState(existingRecipe.description);
 
-  const handleUpdate = (e) => {
-    e.preventDefault();
+  const handleUpdate = (event) => {
+    event.preventDefault(); // 👍 This prevents form submission from reloading the page
     updateRecipe({ id: existingRecipe.id, title, description });
   };
 
