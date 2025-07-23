@@ -3,10 +3,12 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
+import { Routes, Route, Link } from 'react-router-dom';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
+import RecipeDetails from './components/RecipeDetails';
 
-function App() {
+function HomePage() {
   const [count, setCount] = useState(0);
 
   return (
@@ -32,12 +34,21 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      {/* 🔥 Your Recipe Sharing Components Start Here */}
+      {/* 🔪 Recipe Sharing Section */}
       <hr />
       <h2>Recipe Sharing App</h2>
       <AddRecipeForm />
       <RecipeList />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/recipes/:id" element={<RecipeDetails />} />
+    </Routes>
   );
 }
 
